@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wrapper.toupcam.opencv400.Controller">
+    <children>
+        <ImageView fx:id="imageView" fitHeight="480.0" fitWidth="640.0" layoutX="80.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false" />
+        <Button layoutX="633.0" layoutY="546.0" mnemonicParsing="false" onAction="#getImage" text="get image" />
+        <Slider fx:id="slider1" blockIncrement="20.0" layoutX="14.0" layoutY="513.0" majorTickUnit="60000.0" max="120000.0" min="120.0" onMouseDragged="#sliderMove" prefHeight="18.0" prefWidth="259.0" showTickMarks="true" />
+        <TextField fx:id="textField1" layoutX="287.0" layoutY="507.0" />
+        <Button layoutX="486.0" layoutY="507.0" mnemonicParsing="false" onAction="#applyButton" prefHeight="31.0" prefWidth="87.0" text="Appy" />
+        <Button layoutX="486.0" layoutY="540.0" mnemonicParsing="false" onAction="#start" prefHeight="31.0" prefWidth="87.0" text="Start" />
+        <Button layoutX="287.0" layoutY="546.0" mnemonicParsing="false" onAction="#getSnap" prefHeight="31.0" prefWidth="87.0" text="snap" />
+        <MenuButton fx:id="menuButtonResolution" layoutX="14.0" layoutY="546.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="212.0" text="MenuButton">
+            <items>
+                <MenuItem fx:id="menuItem0" mnemonicParsing="false" onAction="#menuItem0Action" visible="false" />
+                <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#menuItem1Action" visible="false" />
+                <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#menuItem2Action" visible="false" />
+            </items>
+        </MenuButton>
+      <Button layoutX="633.0" layoutY="507.0" mnemonicParsing="false" onAction="#showZoomStage" prefHeight="31.0" prefWidth="87.0" text="zoom" />
+    </children>
+</AnchorPane>
